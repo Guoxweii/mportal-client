@@ -4,7 +4,7 @@ require File.expand_path("../now_playing", __FILE__)
 module Live
   class Program < OpenStruct
     class << self
-      def scope(options = {})
+      def scoped(options = {})
         Live::ProgramScope.new(options)
       end
       

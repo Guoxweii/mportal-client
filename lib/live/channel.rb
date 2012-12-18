@@ -22,7 +22,7 @@ module Live
     end
     
     def programs
-      Live::Program.scope(:endpoint => MportalClient.settings.base_uri + self.programs_endpoint)
+      Live::Program.scoped(:endpoint => MportalClient.settings.base_uri + self.programs_endpoint)
     end
   end
 end
