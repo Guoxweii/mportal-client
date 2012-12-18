@@ -9,8 +9,8 @@ module Live
     
     def self.build(json)
       now_playing = NowPlaying.new
-      now_playing.channel_id = json["id"]
-      now_playing.channel_name = json["name"]
+      now_playing.channel_id = json["channel"]["id"]
+      now_playing.channel_name = json["channel"]["name"]
       
       now_playing.past = parse_programs(json["past"]) if json["past"]
       now_playing.now = Program.build(json["now"]) if json["now"]
